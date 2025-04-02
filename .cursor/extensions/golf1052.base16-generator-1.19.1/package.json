@@ -1,0 +1,128 @@
+{
+	"name": "base16-generator",
+	"displayName": "Base16 Theme Generator",
+	"description": "All Base16 themes available on the fly",
+	"version": "1.19.1",
+	"publisher": "golf1052",
+	"keywords": [
+		"base16"
+	],
+	"icon": "images/logo.png",
+	"license": "See license in LICENSE",
+	"homepage": "https://github.com/golf1052/base16-generator",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/golf1052/base16-generator.git"
+	},
+	"bugs": {
+		"url": "https://github.com/golf1052/base16-generator/issues",
+		"email": "golf1052@msn.com"
+	},
+	"galleryBanner": {
+		"color": "#8fa1b3",
+		"theme": "light"
+	},
+	"engines": {
+		"vscode": "^1.22.0"
+	},
+	"categories": [
+		"Themes"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"main": "./out/src/extension",
+	"contributes": {
+		"themes": [
+      {
+        "label": "Base16 Default Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/base16-default-dark.json"
+      }
+    ],
+		"commands": [
+			{
+				"category": "Base16",
+				"title": "Activate theme",
+				"command": "base16.generator.activateTheme"
+			},
+			{
+				"category": "Base16",
+				"title": "Deactivate theme",
+				"command": "base16.generator.deactivateTheme"
+			},
+			{
+				"category": "Base16",
+				"title": "Activate all themes",
+				"command": "base16.generator.activateAllThemes"
+			},
+			{
+				"category": "Base16",
+				"title": "Deactivate all themes",
+				"command": "base16.generator.deactivateAllThemes"
+			}
+		],
+		"configuration": {
+			"properties": {
+				"base16.generator.activatedThemes": {
+					"default": [
+						"base16-default-dark"
+					],
+					"description": "List of Base 16 themes that are active",
+					"items": {
+						"type": "string"
+					},
+					"scope": "application",
+					"type": "array"
+				}
+			}
+		}
+	},
+	"capabilities": {
+		"untrustedWorkspaces": {
+			"supported": true
+		},
+		"virtualWorkspaces": true
+	},
+	"scripts": {
+		"vscode:prepublish": "tsc -p ./",
+		"compile": "tsc -watch -p ./",
+		"test": "node ./out/test/runTest.js"
+	},
+	"dependencies": {
+		"jsonc-parser": "^3.0.0"
+	},
+	"devDependencies": {
+		"@types/color": "^3.0.3",
+		"@types/js-yaml": "^4.0.5",
+		"@types/mkdirp": "^1.0.2",
+		"@types/mocha": "^9.1.1",
+		"@types/node": "^16.11.47",
+		"@types/rimraf": "^3.0.2",
+		"@types/vscode": "^1.22.0",
+		"color": "^4.2.3",
+		"js-yaml": "^4.1.0",
+		"mkdirp": "^1.0.4",
+		"mocha": "^10.0.0",
+		"recursive-copy": "^2.0.14",
+		"rimraf": "^3.0.2",
+		"typescript": "^4.7.4",
+		"vscode-test": "^1.4.0",
+		"webpack": "^5.74.0",
+		"webpack-cli": "^4.10.0"
+	},
+	"__metadata": {
+		"id": "6395de93-5453-4afa-89d9-748ab3cd50f1",
+		"publisherId": "57c8fe45-33dc-4854-a048-545edc3b7bc9",
+		"publisherDisplayName": "golf1052",
+		"targetPlatform": "undefined",
+		"isApplicationScoped": false,
+		"isPreReleaseVersion": false,
+		"hasPreReleaseVersion": false,
+		"installedTimestamp": 1739195710755,
+		"pinned": false,
+		"preRelease": false,
+		"source": "gallery",
+		"size": 18986553
+	}
+}
